@@ -1,7 +1,23 @@
-import fetchData from '/fetchData.js';
-
+// fetch
 const API = 'https://rickandmortyapi.com/api/character/';
 
+function fetchData(url) {
+  return new Promise((resolve, reject) => {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open('GET', url, true);
+
+    xhttp.onreadystatechange = () => {
+      if (xhttp.readyState === 4) {
+        xhttp.status === 200
+          ? resolve(JSON.parse(xhttp.responseText))
+          : reject(new Error('Error', url));
+      }
+    };
+    xhttp.send();
+  });
+}
+
+// classLists
 const characterStatus = document.querySelectorAll('.character-status');
 const characterImage = document.querySelectorAll('.character-image');
 const characterName = document.querySelectorAll('.character-name');
