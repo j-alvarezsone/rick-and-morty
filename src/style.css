@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  font-family: roboto, verdana;
+}
+
+/*------------------header------------------*/
+.header {
+  height: 20rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/Rick-and-Morty-3p-1600x900.jpg);
+  color: floralwhite;
+}
+
+.tab-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  background-image: linear-gradient(
+    to top,
+    rgba(58, 80, 107, 1),
+    rgba(50, 120, 163, 0.4)
+  );
+}
+
+.tab-container-title {
+  font-size: 1.3rem;
+}
+
+.tab-container-info {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.tab-container-info p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+/*------------------header------------------*/
+
+/*------------------button------------------*/
+.button-container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-container button {
+  width: 30%;
+  line-height: 30px;
+  outline: none;
+  color: floralwhite;
+  background-color: transparent;
+  border: solid floralwhite;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-container button:active {
+  background-color: #001f3f;
+}
+
+/*------------------button------------------*/
+
+/*------------------page container------------------*/
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #3a506b;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.character-container {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.character-info {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: floralwhite;
+  box-shadow: 5px 7px 0 #5bc0be;
+  position: relative;
+  border: floralwhite solid;
+  background-color: #007ea7;
+}
+
+.description {
+  margin: 0;
+  text-align: center;
+}
+
+.character-image {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-color: yellowgreen;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.character-name {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.character-dimension {
+  font-size: 0.9em;
+  color: #b7e4c7;
+}
+
+.character-status {
+  top: 0;
+  left: 0;
+
+  border-bottom: solid;
+  border-right: solid;
+  border-bottom-right-radius: 10px;
+
+  padding: 0 5px;
+  position: absolute;
+}
+
+.character-status--dead {
+  color: #ff9e9e;
+}
+
+.character-status--alive {
+  color: #deffa9;
+}
+
+.character-status--unknown {
+  color: #9ec8ff;
+}
+/*------------------page container------------------*/
+
+/*------------------footer------------------*/
+.footer {
+  height: 8rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to top,
+    rgba(29, 53, 87, 1),
+    rgba(58, 80, 107, 1)
+  );
+}
+
+.footer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container p {
+  width: 90%;
+  margin: 0;
+  color: floralwhite;
+  text-align: center;
+  font-size: 1.1rem;
+}
+/*------------------footer------------------*/
+
+/*------------------@media------------------*/
+@media (min-width: 425px) {
+  .character-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .footer-container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .character-container {
+    padding-left: 2%;
+    padding-right: 2%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .character-info {
+    width: 40%;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 14em;
+    background-position: center 40%;
+  }
+
+  .tab-container-info p {
+    font-size: 1.1em;
+  }
+
+  .button-container button {
+    box-shadow: 5px 5px 0 #5bc0be;
+    transition: 1s box-shadow, 0.2s background-color;
+  }
+
+  .button-container:last-child {
+    display: none;
+  }
+
+  .character-info {
+    width: 24%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+  }
+
+  .button-container button:hover {
+    box-shadow: none;
+  }
+
+  .image {
+    width: 90%;
+  }
+
+  .footer-container p {
+    font-size: 1em;
+  }
+}
+/*------------------@media------------------*/

@@ -1,0 +1,14 @@
+{
+  "name": "async_await",
+  "version": "1.0.0",
+  "description": "practica de asincronismo en JAvaScript",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async"
+  ],
+  "author": "Jorge Alvarez",
+  "license": "ISC"
+}
