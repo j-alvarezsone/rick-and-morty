@@ -1,4 +1,4 @@
-import fetchData from '/src/utils/fetchData.js';
+import fetchData from '/fetchData.js';
 
 const API = 'https://rickandmortyapi.com/api/character/';
 
